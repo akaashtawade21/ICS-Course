@@ -1,19 +1,20 @@
 def shuffle arr
+  recursive_shuffle arr, []
+end
 
-  shuffled = []
-
-  if arr.length == 0
-    return shuffled
+def recursive_shuffle unshuffled_arr, shuffled_arr
+  if unshuffled_arr.length == 0
+    return shuffled_arr
   end
 
   tmp = []
-  rand_pos = rand(arr.length)
+  rand_pos = rand(unshuffled_arr.length)
   curr_pos = 0
 
-  arr.each do |object|
+  unshuffled_arr.each do |object|
 
     if rand_pos == curr_pos
-      shuffled.push object
+      shuffled_arr.push object
     else
       tmp.push object
     end
@@ -22,9 +23,21 @@ def shuffle arr
 
   end
 
-  arr = tmp
-  shuffle arr
+  unshuffled_arr = tmp
+  recursive_shuffle unshuffled_arr, shuffled_arr
 
 end
 
-puts(shuffle(['blue','camel','asprin','blue','zebra','a']))
+puts "Please list some words:"
+words = []
+
+while true
+  word = gets.chomp
+  if(word == '')
+    break
+  else
+    words.push word
+  end
+end
+
+puts(shuffle(words))

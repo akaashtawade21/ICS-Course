@@ -1,5 +1,5 @@
 def sort arr # This "wraps" recursive_sort.
-recursive_sort arr, []
+  recursive_sort arr, []
 end
 
 def recursive_sort unsorted_arr, sorted_arr
@@ -23,4 +23,16 @@ def recursive_sort unsorted_arr, sorted_arr
   recursive_sort tmp, sorted_arr
   end
 
-puts(sort(['Blue','camel','asprin','blue','zebra','a']))
+puts "Please list some words:"
+words = []
+
+while true
+  word = gets.chomp
+  if(word == '')
+    break
+  else
+    words.push word
+  end
+end
+
+puts(sort(words))

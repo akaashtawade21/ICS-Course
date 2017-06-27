@@ -115,20 +115,22 @@ def english_number number
             # The "-1" is because tens_place[3] is
             # 'forty', not 'thirty'.
     end
-          if left > 0
-            # So we don't write 'sixtyfour'...
-            num_string = num_string + '-'
-          end
-        end
+
+    if left > 0
+      # So we don't write 'sixtyfour'...
+      num_string = num_string + '-'
+    end
+  end
 
   write = left # How many ones left to write out?
-        left = 0 # Subtract off those ones.
-        if write > 0
-          num_string = num_string + ones_place[write-1]
+  left = 0 # Subtract off those ones.
+  if write > 0
+    num_string = num_string + ones_place[write-1]
           # The "-1" is because ones_place[3] is
           # 'four', not 'three'.
-        end
+  end
         # Now we just return "num_string"...
-        num_string
-      end
-      puts english_number(2302349829)
+  num_string
+end
+
+puts english_number(2302349829)
