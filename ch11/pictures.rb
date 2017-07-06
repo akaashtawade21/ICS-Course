@@ -13,12 +13,11 @@ pic_number = 1
 
 pic_names.each do |name|
   print '.' # This is our "progress bar".
-  if file.exists name == true
-    exit
+  if file.exists name
     puts "Are you sure you want to delete the duplicate file? (yes or no)"
     answer = gets.chomp
   if answer == "no"
-    break
+    exit
   else
     new_name = if pic_number < 10
     " #{batch_name}0#{pic_number}.jpg"
