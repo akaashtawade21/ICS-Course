@@ -13,7 +13,7 @@ pic_number = 1
 
 pic_names.each do |name|
   print '.' # This is our "progress bar".
-  if file.exists name
+  if file.exists new_name
     puts "Are you sure you want to delete the duplicate file? (yes or no)"
     answer = gets.chomp
   if answer == "no"

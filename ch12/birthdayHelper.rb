@@ -20,5 +20,5 @@ date = birthday_hash[name]
 if date == nil
   puts "Sorry, don't have that birthday"
 else
-  puts "#{name}'s birthday is on #{date[0..4]}"
+  puts "#{name}'s birthday is on #{date[0..5]}"
 end
