@@ -25,3 +25,4 @@ def profile block_description, &block
       number = number + 1
     end
   end
+end

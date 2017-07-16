@@ -95,7 +95,9 @@ class Dragon
   end
 end
 
-pet = Dragon.new 'Norbert'
+puts 'What should the dragon be named?'
+name = gets.chomp
+pet = Dragon.new name
 
   while true
     puts "Please enter what you would like to do with the dragon (feed, rock,

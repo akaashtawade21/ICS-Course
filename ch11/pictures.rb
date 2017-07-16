@@ -11,9 +11,18 @@ print "Downloading #{pic_names.length} files: "
 # though normally I like to count from 0.
 pic_number = 1
 
+
+
 pic_names.each do |name|
   print '.' # This is our "progress bar".
-  if file.exists new_name
+
+  name_check = if pic_number < 10
+  " #{batch_name}0#{pic_number}.jpg"
+  else
+    "#{batch_name}#{pic_number}.jpg"
+  end
+
+  if file.exists name_check
     puts "Are you sure you want to delete the duplicate file? (yes or no)"
     answer = gets.chomp
   if answer == "no"

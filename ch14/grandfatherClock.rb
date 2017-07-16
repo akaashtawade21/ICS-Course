@@ -7,7 +7,7 @@ def grandfatherClock &block
   end
 
   if hour == 0
-    hour = hour + 12
+    hour = 12
   end
 
   hour.times do
