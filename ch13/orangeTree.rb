@@ -41,7 +41,7 @@ class OrangeTree
     if @alive
       puts "#{@tree_name} the orange tree is #{@age} years old"
     else
-      puts "The tree is dead, it has no height"
+      puts "The tree is dead"
     end
   end
 
